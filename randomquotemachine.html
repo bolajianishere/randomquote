@@ -1,0 +1,110 @@
+<html>
+    <head>
+         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="random.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <h3 class="header">Random quote generator</h3>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#quoteg1"></a></li>
+                        <li><a href="#quoteg1"></a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="area" class="container-fluid">
+            <div class = "row text-center">
+                <div class = "col-xs-12">
+                    <h1  class="a-text">Random Quote Machine</h1>
+                    </div>
+                </div>
+            <div class = "row text-center">
+                <div class = "col-xs-12  message well">
+                <h3>Click the button to Geneate Quote</h3>
+                </div>
+            </div>
+            <div class = "row text-center">
+                <div class="col-md-3 col-xs-1">
+                </div>
+                <div class = "col-md-6 col-xs-10">
+                    
+                       
+							<button class = "btn btn-default btn-lg btn-success" id = "getMessage"><i class="fa fa-fire fa-fw"></i>	Geneate quote</button>             
+                            <button class = "btn btn-default btn-lg btn-info" id = "tweetMessage"><i class="fa fa-twitter fa-fw"></i> Tweet quote</button>
+                </div>
+                 <div class="col-md-3 col-xs-10">
+                </div>
+            </div>
+        </div>
+
+         <footer class="bg-g">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h4 class="header a-text"> created by Anishere Bolaji</h4>
+                    </div>
+                </div>
+        </footer>
+        <script>
+            var quote = new Array()
+    quote[0] = '<h3>&quot;There\'s a difference between a philosophy and a bumper sticker.&quot;<br /><small>-Charles M. Schulz</small></h3>'
+    quote[1] = '<h3>&quot;We are what we repeatedly do. Excellence, therefore, is not an act but a habit.&quot;<br /><small>-Aristotle</small></h3>'
+    quote[2] = '<h3>&quot;Take calculated risks. That is quite different from being rash.&quot;<br /><small>-George S. Patton</small></h3>'
+    quote[3] = '<h3>&quot;If we all did the things we are capable of doing, we would literally astound ourselves.&quot;<br /><small>-thomas a . edison</small></h3>'
+    quote[4] = '<h3>&quot;Dream big and dare to fail.&quot;<br /><small>-Norman Vaughan</small></h3>'
+    quote[5] = '<h3>&quot;With will one can do anything.&quot;<br /><small>-Samuel Smiles</small></h3>'
+    quote[6] = '<h3>&quot;We are all inventors, each sailing out on a voyage of discovery, guided each by a private chart, of which there is no duplicate. The world is all gates, all opportunities.&quot;<br /><small>-Ralph Waldo Emerson</small></h3>'
+    quote[7] = '<h3>&quot;When you get into a tight place and everything goes against you, till it seems you could not hang on a minute longer, never give up then, for that is just the place and time that the tide will turn.&quot;<br /><small>-Harriet Beecher Stowe</small></h3>'
+    quote[8] = '<h3>&quot;I detest that man who hides one thing in the depths of his heart, and speaks for another.&quot;<br /><small>-homer</small></h3>'
+    quote[9] = '<h3>&quot;A companion\'s words of persuasion are effective.&quot;<br /><small>-homer</small></h3>'
+    quote[10] = '<h3>&quot;As a cure for worrying, work is better than whisky.&quot;<br /><small>-thomas a . edison</small></h3>'
+    quote[11] = '<h3>&quot;If you do not hope, you will not find what is beyond your hopes.&quot;<br /><small>-St. Clement of Alexandra</small></h3>'
+    quote[12] = '<h3>&quot;Always aim at complete harmony of thought and word and deed. Always aim at purifying your thoughts and everything will be well.&quot;<br /><small>-Mahatma Gandhi</small></h3>'
+    quote[13] = '<h3>&quot;Happiness is when what you think, what you say, and what you do are in harmony.&quot;<br /><small>-Mahatma Gandhi</small></h3>'
+    quote[14] = '<h3>&quot;Hate the sin, love the sinner.&quot;<br /><small>-Mahatma Gandhi</small></h3>'
+    quote[15] = '<h3>&quot;except a man be born again, he cannot see the kingdom of God.&quot;<br /><small>-christ</small></h3>'
+    quote[16] = '<h3>&quot;A flatterer is a friend who is your inferior, or pretends to be so.&quot;<br /><small>-aristotle</small></h3>'
+    quote[17] = '<h3>&quot;A friend is a second self.&quot;<br /><small>-Mahatma Gandhi</small></h3>'
+    quote[18] = '<h3>&quot;One needs to be slow to form convictions, but once formed they must be defended against the heaviest odds.&quot;<br /><small>-Mahatma Gandhi</small></h3>'
+    quote[19] = '<h3>&quot;It is unwise to be too sure of one\'s own wisdom. It is healthy to be reminded that the strongest might weaken and the wisest might err.&quot;<br /><small>-Mahatma Gandhi</small></h3>'
+
+	function tweet(message) {
+        window.open('https://twitter.com/intent/tweet?hashtags=&text='   
+        + encodeURIComponent(message));
+        }
+
+            var msg;
+            function tweetHandler() {
+            tweet($(msg).text()); 
+            //to tweet(msg);
+            }
+
+            $(document).ready(function() {
+            $("#getMessage").on("click", function(){
+                var key = Math.floor(Math.random()*(quote.length));
+                msg = quote[key];
+                $(".message").html(msg);
+            });
+
+            $('#tweetMessage').on('click', tweetHandler);
+
+            });
+        </script>
+    </body>
+</html>
+
